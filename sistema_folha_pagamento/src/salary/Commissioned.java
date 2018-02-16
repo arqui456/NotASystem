@@ -1,12 +1,11 @@
 package salary;
 
+import java.util.ArrayList;
 
 public class Commissioned {
 
-
-	private Sales[] sales;
+	private ArrayList<Sales> sales = new ArrayList<Sales>();
 	private int numberOfSales;
-	private String payDay = "bi-weekly";
 	private double wage;
 
 	public Commissioned() {
@@ -19,17 +18,9 @@ public class Commissioned {
 	}
 	
 	public Commissioned(Sales sales){
-		this.sales[this.numberOfSales] = sales;
+		this.sales.add(sales);
 	}
 	
-	public Sales[] getSales() {
-		return sales;
-	}
-
-	public void setSales(Sales[] sales) {
-		this.sales = sales;
-	}
-
 	public int getNumberOfSales() {
 		return numberOfSales;
 	}
@@ -37,15 +28,11 @@ public class Commissioned {
 	public void setNumberOfSales(int numberOfSales) {
 		this.numberOfSales = numberOfSales;
 	}
-
-	public String getPayDay() {
-		return payDay;
+	
+	public void addSale(Sales sale) {
+		this.sales.add(sale);
 	}
-
-	public void setPayDay(String payDay) {
-		this.payDay = payDay;
-	}
-
+	
 	public double getWage() {
 		return wage;
 	}
@@ -53,12 +40,4 @@ public class Commissioned {
 	public void setWage(double wage) {
 		this.wage = wage;
 	}
-	
-	
-	
-	
-	
-	
-
-	
 }

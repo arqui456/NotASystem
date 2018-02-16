@@ -2,7 +2,6 @@ package salary;
 
 public class Salaried {
 	
-	private String payDay = "every month's last day";
 	private double wage;
 
 	public Salaried() {
@@ -13,14 +12,6 @@ public class Salaried {
 		this.wage = wage;
 	}
 
-	public String getPayDay() {
-		return payDay;
-	}
-
-	public void setPayDay(String payDay) {
-		this.payDay = payDay;
-	}
-
 	public double getWage() {
 		return wage;
 	}
@@ -28,4 +19,11 @@ public class Salaried {
 	public void setWage(double wage) {
 		this.wage = wage;
 	}
+
+	@Override
+	public String toString() {
+		return "Salaried [" + "wage: " + wage;
+	}
+	
+	
 }

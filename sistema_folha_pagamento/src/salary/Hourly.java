@@ -2,7 +2,6 @@ package salary;
 
 public class Hourly {
 
-	private static String payDay = "every week friday";
 	private int workHours;
 	private int extraHours;
 	private double wage;
@@ -25,10 +24,6 @@ public class Hourly {
 		return workHours;
 	}
 
-	public static String getPayDay() {
-		return payDay;
-	}
-
 	public int getExtraHours() {
 		return extraHours;
 	}
@@ -43,10 +38,6 @@ public class Hourly {
 
 	public void setWage(double wage) {
 		this.wage = wage;
-	}
-
-	public static void setPayDay(String payDay) {
-		Hourly.payDay = payDay;
 	}
 
 	@Override

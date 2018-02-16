@@ -1,5 +1,7 @@
 package employee;
 
+import java.util.ArrayList;
+
 import salary.Type;
 import sindicate.Sindicate;
 
@@ -10,10 +12,13 @@ public class Employee {
 	private String adress;
 	private Type type;
 	private Sindicate sindicate;
+	private ArrayList<Card> card = new ArrayList<Card>();
+	private String payday;
+	private ServiceTax tax;
 	
 
 	public Employee() {
-		this.id++;
+		
 	}
 	
 	public Employee(String name, String adress) {
@@ -74,9 +79,41 @@ public class Employee {
 	public Sindicate getSindicate() {
 		return sindicate;
 	}
+	
+	public void setSindicate() {
+		this.sindicate = new Sindicate();
+	}
 
 	public void setSindicate(Sindicate sindicate) {
 		this.sindicate = sindicate;
+	}
+	
+	public ArrayList<Card> getCard() {
+		return card;
+	}
+
+	public void setCard(ArrayList<Card> card) {
+		this.card = card;
+	}
+	
+	public void addCard(Card card) {
+		this.card.add(card);
+	}
+	
+	public String getPayday() {
+		return payday;
+	}
+
+	public void setPayday(String payday) {
+		this.payday = payday;
+	}
+	
+	public ServiceTax getTax() {
+		return tax;
+	}
+
+	public void setTax(ServiceTax tax) {
+		this.tax = tax;
 	}
 
 	@Override
